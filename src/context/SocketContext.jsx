@@ -11,7 +11,7 @@ export function SocketProvider({ children }) {
   useEffect(() => {
     const token = localStorage.getItem('token')
     if (token) {
-      const newSocket = io('http://localhost:5000', {
+      const newSocket = io('https://task-management-project-7wls.onrender.com', {
         auth: { token },
         transports: ['websocket', 'polling']
       })
